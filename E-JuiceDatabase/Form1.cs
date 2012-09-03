@@ -21,7 +21,7 @@ namespace E_JuiceDatabase
 
         public void InitializeGUI()
         {
-            List<> flavors = new List<>;
+            List<> flavors = new List<>();
         }
         // save all flavorings button
         private void SaveBtnFL_Click(object sender, EventArgs e)
