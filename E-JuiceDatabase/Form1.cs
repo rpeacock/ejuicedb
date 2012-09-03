@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.IO;
+using DBClassLib;
 
 namespace E_JuiceDatabase
 {
@@ -15,9 +16,14 @@ namespace E_JuiceDatabase
         public Form1()
         {
             InitializeComponent();
+            InitializeGUI();
         }
 
-        // Flavor save button
+        public void InitializeGUI()
+        {
+            List<> flavors = new List<>;
+        }
+        // save all flavorings button
         private void SaveBtnFL_Click(object sender, EventArgs e)
         {
             const string delimit = ";";
@@ -39,7 +45,7 @@ namespace E_JuiceDatabase
                 FAmount.Text = string.Empty;
             }
         }
-        // save juice button
+        // save all juices button
         private void SaveBtnJ_Click(object sender, EventArgs e)
         {
             const string delimit = ";";
@@ -64,31 +70,6 @@ namespace E_JuiceDatabase
                 Jconcentration.Text = string.Empty;
             }
         }
-
-
-
-
-
-
-
-
-
-
-
-        class Flavor
-        {
-            public string Name { get; set; }
-            public double Amount { get; set; }
-        }
-
-        class Juice
-        {
-            public string Name { get; set; }
-            public double Amount { get; set; }
-            public string Concentration { get; set; }
-        }
-
-
 
     }
 }
